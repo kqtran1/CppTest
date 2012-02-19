@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Calculator.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +14,6 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Calculator.cpp</itemPath>
-      <itemPath>Calculator.h</itemPath>
       <itemPath>CalculatorTest.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -37,19 +37,6 @@
         <compilerSet>default</compilerSet>
       </toolsSet>
       <compileType>
-        <ccTool>
-          <incDir>
-            <pElem>/Users/rastakiki/prog/boost_1_47_0</pElem>
-          </incDir>
-        </ccTool>
-        <linkerTool>
-          <linkerAddLib>
-            <pElem>/Users/rastakiki/prog/boost_1_47_0/stage/lib</pElem>
-          </linkerAddLib>
-          <commandLine>-lboost_unit_test_framework</commandLine>
-        </linkerTool>
-      </compileType>
-      <folder path="TestFiles/f1">
         <cTool>
           <incDir>
             <pElem>.</pElem>
@@ -57,13 +44,22 @@
         </cTool>
         <ccTool>
           <incDir>
+            <pElem>/Users/rastakiki/prog/boost_1_47_0</pElem>
             <pElem>.</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/Foundation/include</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/Net/include</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/Util/include</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/XML/include</pElem>
           </incDir>
         </ccTool>
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerAddLib>
+            <pElem>/Users/rastakiki/prog/boost_1_47_0/stage/lib</pElem>
+            <pElem>/book/dev/poco-1.4.3p1/lib/Darwin/x86_64</pElem>
+          </linkerAddLib>
+          <commandLine>-lboost_unit_test_framework</commandLine>
         </linkerTool>
-      </folder>
+      </compileType>
     </conf>
     <conf name="Release" type="1">
       <toolsSet>

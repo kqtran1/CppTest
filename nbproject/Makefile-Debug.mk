@@ -53,7 +53,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/Users/rastakiki/prog/boost_1_47_0/stage/lib
+LDLIBSOPTIONS=-L/Users/rastakiki/prog/boost_1_47_0/stage/lib -L/book/dev/poco-1.4.3p1/lib/Darwin/x86_64
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -66,17 +66,17 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1: ${OBJECTFILES}
 ${OBJECTDIR}/CalculatorTest.o: CalculatorTest.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -MMD -MP -MF $@.d -o ${OBJECTDIR}/CalculatorTest.o CalculatorTest.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/CalculatorTest.o CalculatorTest.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/Calculator.o: Calculator.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Calculator.o Calculator.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/Calculator.o Calculator.cpp
 
 # Subprojects
 .build-subprojects:
