@@ -53,7 +53,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/Users/rastakiki/prog/boost_1_47_0/stage/lib -L/book/dev/poco-1.4.3p1/lib/Darwin/x86_64
+LDLIBSOPTIONS=-L/book/dev/boost_1_47_0/stage/lib -L/book/dev/poco-1.4.3p1/lib/Darwin/x86_64 -L/book/dev/gtest-1.6.0/lib -lgtest -lgtest_main
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -61,22 +61,22 @@ LDLIBSOPTIONS=-L/Users/rastakiki/prog/boost_1_47_0/stage/lib -L/book/dev/poco-1.
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -lboost_unit_test_framework -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1 ${OBJECTFILES} ${LDLIBSOPTIONS} 
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cppapplication_1 ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
 ${OBJECTDIR}/CalculatorTest.o: CalculatorTest.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/CalculatorTest.o CalculatorTest.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -I/book/dev/gtest-1.6.0/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/CalculatorTest.o CalculatorTest.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -I/book/dev/gtest-1.6.0/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/Calculator.o: Calculator.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/Calculator.o Calculator.cpp
+	$(COMPILE.cc) -g -I/Users/rastakiki/prog/boost_1_47_0 -I. -I/book/dev/poco-1.4.3p1/Foundation/include -I/book/dev/poco-1.4.3p1/Net/include -I/book/dev/poco-1.4.3p1/Util/include -I/book/dev/poco-1.4.3p1/XML/include -I/book/dev/gtest-1.6.0/include -MMD -MP -MF $@.d -o ${OBJECTDIR}/Calculator.o Calculator.cpp
 
 # Subprojects
 .build-subprojects:
